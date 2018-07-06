@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         btnPlayMp4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.girlslikeyou));
+//                videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.girlslikeyou));
 //                videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 //                    @Override
 //                    public void onPrepared(MediaPlayer mp) {
@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
 //                MediaController mediaController = new MediaController(MainActivity.this);
 //                mediaController.setMediaPlayer(videoView);
 //                videoView.setMediaController(mediaController);
+                videoView.setVideoURI(Uri.parse("http://khoapham.vn/download/vuoncaovietnam.mp4"));
+                videoView.start();
             }
         });
     }

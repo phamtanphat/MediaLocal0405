@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 //                Log.d("BBB","Thoi gian bai hat dang chay " + mediaPlayer.getCurrentPosition());
 
 //                mediaPlayer.start();
-
+                PlayNhacMp3("http://khoapham.vn/download/vietnamoi.mp3");
             }
         });
         btnPlayMp4.setOnClickListener(new View.OnClickListener() {

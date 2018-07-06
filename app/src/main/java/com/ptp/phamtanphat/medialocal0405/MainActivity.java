@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import java.text.SimpleDateFormat;
@@ -41,7 +42,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.girlslikeyou));
+//                videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//                    @Override
+//                    public void onPrepared(MediaPlayer mp) {
+//                        mp.start();
+//                    }
+//                });
                 videoView.start();
+
+                MediaController mediaController = new MediaController(MainActivity.this);
+                mediaController.setMediaPlayer(videoView);
+                videoView.setMediaController(mediaController);
             }
         });
     }
